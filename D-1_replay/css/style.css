@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* div, header, .container, footer, p, a, nav, ul, li, img {outline: 1px dotted red;} */
+
+.wrap {
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+  color: #333;
+}
+
+/* header 영역 */
+.header {
+  flex: 0 0 200px;
+}
+
+/* logo 영역 */
+.header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+}
+
+.header .logo img {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
+
+/* menu 영역 */
+.header .nav {
+  display: block;
+  margin: 20px auto 0px;
+  width: calc(100% - 20px);
+  /* border: 1px solid #000; */
+}
+
+.header .nav > ul {
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+
+/* 1 depth */
+.header .nav > ul > li {
+  text-align: center;
+}
+
+.header .nav > ul > li > ul {
+  display: none;
+}
+
+.header .nav > ul > li:hover > ul {
+  display: block;
+}
+
+.header .nav > ul > li > a {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.header .nav > ul > li:hover > a {
+  background-color: #69c058;
+}
+
+/* 2 depth */
+.header .nav > ul > li > ul {
+  height: 160px;
+}
+.header .nav > ul > li > ul > li {
+
+}
+.header .nav > ul > li > ul > li > a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+}
+
+.header .nav > ul > li > ul > li:hover > a {
+  background-color: #a7a7a7;
+}
+
+/* spot menu 영역 */
+.header .spot_menu {
+  display: flex;
+  justify-content: center;
+}
+
+.header .spot_menu p {
+  padding: 0px 10px;
+}
+
+
+
+
+/* container 영역 */
+.container {
+  position: relative;
+  flex: 1 1 calc(100% - 200px);
+}
+
+.goto {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+}
+
+.container .slide {
+  height: 400px;
+}
+
+.container .banner {
+  height: 200px;
+}
+
+.container .board {
+  height: 250px;
+}
+
+/* footer 영역 */
+.footer {
+  display: flex;
+  height: 100px;
+}
+
+.logo_footer {
+  flex: 0 0 200px;
+}

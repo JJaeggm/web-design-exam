@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+/* reset */
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none; color: inherit;}
+body {font: 12px '돋움', dotum, sans-serif; color: #333; background-color: #fff;}
+address {font-style: normal;}
+small {font: 12px '돋움', dotum;}
+
+/* ul, li, p, div, nav, header, footer, #container {outline: 1px dotted red;} */
+
+#wrap {display: flex; width: 100%; height: 850px; }
+
+#wrap header {flex: 0 0 200px; /* width: 200px; */ background-color: #ccc;}
+
+header h1 {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+
+header .nav {
+  width: calc(100% - 20px);
+  margin: 0 auto 20px;
+  color: #999;
+}
+
+/* 1depth */
+header .nav > ul {
+  background-color: ;
+}
+
+header .nav > ul > li {}
+
+header .nav > ul > li > a {
+  display: block; 
+  padding: 8px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase; 
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #333;
+  transition: 30ms;
+}
+
+header .nav > ul > li:hover > a {
+  background-color: #fff;
+  color: #333;
+}
+
+/* 2depth */
+header .nav > ul > li > ul {
+  padding: 10px 10px 20px;
+  display: none;
+}
+
+/* header .nav > ul > li:hover > ul {
+  display: block;
+} */
+
+header .nav > ul > li > ul li {}
+
+header .nav > ul > li > ul li a {
+  display: block;
+  padding: 10px 20px;
+  background-color: #555;
+  border-bottom: 1px dotted #fff;
+  margin-bottom: 2px;
+}
+
+header .nav > ul > li > ul li a:hover {
+  background-color: rgb(255, 255, 255,.5);
+  color: #333;
+}
+
+
+/* spot menu : 로그인 회원가입 */
+header .spot {text-align: center;}
+
+header .spot > a:hover {text-decoration: underline;}
+
+
+#container {position: relative; flex: 1; /* width: calc(100% - 200px); */ background-color: #eee;}
+
+#slide {overflow: hidden; height: 400px;}
+#slide ul {position: relative; width: 100%; height: 1200px;}
+#slide ul li {float: left; width: 100%; height: 400px;}
+#slide ul li  a {display: block; height: 400px; background: #ddd;}
+#slide ul li.s1 a {background-image: url(../img/slide-1.png); background-repeat: no-repeat; background-position: center;}
+#slide ul li.s2 a {background-image: url(../img/slide-2.png); background-repeat: no-repeat; background-position: center;}
+#slide ul li.s3 a {background-image: url(../img/slide-3.png); background-repeat: no-repeat; background-position: center;}
+
+#slide ul li a p {padding: 20px; display: inline-block; background-color: rgba(255,255,255,.5); font-size: 24px;}
+
+
+#banner {display: flex; gap: 20px; height: 200px; align-items: center;}
+#banner figure {}
+#banner dl {}
+#banner dl dt {margin-bottom: 10px; font-weight: bold; font-size: 16px;}
+#banner .more {font-size: 50px; font-weight: bold;}
+
+#bbs {height: 250px;}
+#bbs dl {position: relative; width: 100%; height: 250px;}
+#bbs dl dt {display: inline-block; height: 50px; line-height: 50px; font-weight: bold; font-size: 16px; padding: 0 20px; border-bottom: 5px solid crimson; box-sizing: border-box;}
+#bbs dl dt.on {}
+#bbs dl dd {position: absolute; left: 0; top: 50px; width: 100%; height: 200px; /* background-color: #aaa; */}
+
+/* 공지사항 */
+#bbs dl dd .notice {display: flex; flex-direction: column; justify-content: center; height: 100%;}
+#bbs dl dd .notice li {position: relative; padding-right: 100px; line-height: 2;
+  /* 말줄임 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+#bbs dl dd .notice li a {}
+#bbs dl dd .notice li a .date {position: absolute; right: 0; top: 0;}
+
+/* 갤러리 */
+#bbs dl dd .gallery {/* display: none;  */display: flex; align-items: center; gap: 10px; height: 200px;}
+#bbs dl dd .gallery li {flex: 1;}
+#bbs dl dd .gallery li a {}
+#bbs dl dd .gallery li img {max-width:  150px;}
+  
+#goto {position: absolute; top: 0; right: 0; background-color: #fff; text-align: center; padding: 10px;}
+#goto ul {}
+#goto ul li:not(:last-child) {margin-bottom: 10px; border-bottom: 1px dotted gray;}
+#goto ul li a {display: block;}
+#goto ul li a figure {}
+#goto ul li a figure figcaption {padding: 5px 0;}
+
+footer {display: flex; width: 100%; height: 100px;}
+
+footer .logo {
+  flex: 0 0 200px;
+}
+
+footer .copyright {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+footer .sns {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 200px;
+}
+
+/* 일반 레이어 팝업 */
+.popup {position: fixed; left: 50%; top: 50%; z-index: 9999; transform: translate(-50%, -50%); background-color: #fff; border: 5px solid #ccc; padding: 20px; max-width: 500px;}
+.popup .pop_title {margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #ccc;}
+.popup .pop_cont {}
+.popup .pop_close {padding: 10px; background-color: #ccc; color: #fff; text-align: center;}
