@@ -15,18 +15,18 @@ a {
   color: inherit;
 }
 
-html, body {
+html,
+body {
   height: 100%;
-  background-color: rgb(255, 251, 247);
 }
 
 /* div, p, ul, li, a, img, span {outline: 1px dotted red;} */
-
 
 /* wrap */
 .wrap {
   width: 100%;
   height: 100%;
+  background: rgb(255, 251, 247);
 }
 
 /* top */
@@ -39,7 +39,6 @@ html, body {
 /* header */
 .header {
   flex: 0 0 200px;
-  background: rgb(255, 251, 247);
 }
 
 /* logo */
@@ -108,7 +107,6 @@ html, body {
 /* container */
 .container {
   flex: 0 1 400px;
-  background: rgb(255, 251, 247);
 }
 
 .top_banner {
@@ -124,16 +122,22 @@ html, body {
   flex: 0 0 50px;
   height: 50px;
 }
-.top_banner > .text_wrap {
-
+.top_banner .text_wrap {
+  padding: 0 0 0 20px;
 }
-.top_banner > .right_arrow {
+.top_banner .text_wrap > a:first-child > p {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.top_banner .right_arrow {
   font-size: 50px;
 }
 
 /* 공지사항 */
 .notice_wrap {
-  padding-bottom: 60px;
+  padding-bottom: 30px;
+  width: calc(100% - 20px);
+  margin: 0 auto;
 }
 .notice_wrap > .container_title {
   display: flex;
@@ -149,7 +153,8 @@ html, body {
   padding-bottom: 2px;
 }
 
-.table_wrap {
+.table_wrap,
+.gallery {
   border: 1px solid #555;
 }
 
@@ -160,6 +165,10 @@ html, body {
 }
 
 /* 갤러리 */
+.gallery_wrap {
+  width: calc(100% - 20px);
+  margin: 0 auto;
+}
 .gallery_wrap > .container_title {
   display: flex;
   justify-content: center;
@@ -174,12 +183,59 @@ html, body {
   padding-bottom: 2px;
 }
 
-
+.gallery img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+.photo {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+.photo p {
+  text-align: center;
+}
 
 /* slide */
 .slide {
   flex: 1 3 calc(100% - 600px);
-  background: #ffd8d8;
+  overflow: hidden;
+  height: 100%;
+}
+
+.slide > ul {
+  position: relative;
+  display: flex;
+  width: 300%;
+  height: 100%;
+}
+
+.slide > ul > li {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slide > ul > li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.slide > ul > li:nth-child(1) {
+  background-image: url(../img/slide_1.jpg);
+}
+
+.slide > ul > li:nth-child(2) {
+  background-image: url(../img/slide_2.jpg);
+}
+
+.slide > ul > li:nth-child(3) {
+  background-image: url(../img/slide_3.jpg);
 }
 
 /* footer */
@@ -188,4 +244,3 @@ html, body {
   height: 120px;
   background: #555;
 }
-
