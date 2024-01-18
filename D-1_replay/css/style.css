@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 li {
@@ -10,6 +11,11 @@ li {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+body {
+  background: #fff;
+  color: #333;
 }
 
 /* div, header, .container, footer, p, a, nav, ul, li, img {outline: 1px dotted red;} */
@@ -65,7 +71,7 @@ a {
 }
 
 .header .nav > ul > li:hover > ul {
-  display: block;
+  /* display: block; */
 }
 
 .header .nav > ul > li > a {
@@ -90,10 +96,11 @@ a {
   display: block;
   height: 40px;
   line-height: 40px;
+  transition: 0.3s;
 }
 
 .header .nav > ul > li > ul > li:hover > a {
-  background-color: #a7a7a7;
+  background-color: #aaec9b;
 }
 
 /* spot menu 영역 */

@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background: #fff;
+  color: #333;
+}
+
+/* div, header, .container, footer, p, a, nav, ul, li, img {outline: 1px dotted red;} */
+
+.wrap {
+  height: 950px;
+}
+
+.top {
+  height: 850px;
+  background: #fc6;
+  display: flex;
+}
+
+header {
+  width: 200px;
+  background: #c47e19;
+  padding: 30px 10px;
+}
+header h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* 1 depth */
+nav > ul > li > a {
+  display: block;
+  background: #333;
+  padding: 10px 20px;
+  color: #fff;
+}
+nav > ul > li > a:hover {
+  background: #8e5b12;
+}
+
+/* 2 depth */
+.sub {
+  display: none;
+}
+
+.sub li a {
+  display: block;
+  background: #fff;
+  padding: 10px 20px;
+}
+
+.sub li a:hover {
+  background: #ccc;
+}
+
+/* spot */
+.spot {
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contents {
+  width: calc(100% - 200px);
+  background: pink;
+}
+
+/* slide 영역 */
+.slide {
+  position: relative;
+  height: 400px;
+  background: #369;
+  overflow: hidden;
+}
+.slide ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1200px;
+}
+.slide ul li {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+.slide ul li a {
+  display: block;
+  height: 100%;
+}
+.slide ul li.s1 {
+  background: url(https://picsum.photos/800) no-repeat center/cover;
+}
+.slide ul li.s2 {
+  background: url(https://picsum.photos/800) no-repeat center/cover;
+}
+.slide ul li.s3 {
+  background: url(https://picsum.photos/800) no-repeat center/cover;
+}
+.slide ul li .text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+}
+.slide ul li .text h2 {
+  font-size: 40px;
+  text-shadow: 3px 3px 5px rgba(0,0,0,.8);
+  margin-bottom: 10px;
+}
+.slide ul li .text h2 span {
+  color: #c47e19;
+}
+.slide ul li .text p {
+  font-size: 20px;
+  text-shadow: 3px 3px 5px rgba(0,0,0,.8);
+}
+
+
+.banner {
+  height: 200px;
+  background: #ccc;
+}
+
+.con {
+  height: 250px;
+  background: yellowgreen;
+}
+
+footer {
+  height: 100px;
+  background: #333;
+}
